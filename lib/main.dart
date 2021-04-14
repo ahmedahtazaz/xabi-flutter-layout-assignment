@@ -1,5 +1,6 @@
-import 'package:bottom_drawer/bottom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:ahtazaz_layout_assignment/drawer.dart';
+import 'package:ahtazaz_layout_assignment/form.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,14 +29,16 @@ class _MyAppState extends State<MyApp> {
           children: [
             _button == 'Assignment 1'
                 ? _layoutAssignment(context)
-                : Text(
-                    'Coming Soon',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Color(0xFF000000),
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16),
-                  ),
+                : _button == 'Assignment 2'
+                    ? MyCustomForm()
+                    : Text(
+                        'Coming Soon',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Color(0xFF000000),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16),
+                      ),
             _buildBottomDrawer(context),
           ],
         ),
@@ -242,7 +245,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   String _button = 'Assignment 1';
-  double _headerHeight = 60.0;
-  double _bodyHeight = 0;
+  double _headerHeight = 60;
+  double _bodyHeight = 70;
   BottomDrawerController _controller = BottomDrawerController();
 }
