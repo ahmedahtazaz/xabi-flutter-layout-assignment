@@ -1,3 +1,4 @@
+import 'package:ahtazaz_layout_assignment/animation.dart';
 import 'package:flutter/material.dart';
 import 'package:ahtazaz_layout_assignment/drawer.dart';
 import 'package:ahtazaz_layout_assignment/form.dart';
@@ -31,14 +32,16 @@ class _MyAppState extends State<MyApp> {
                 ? _layoutAssignment(context)
                 : _button == 'Assignment 2'
                     ? MyCustomForm()
-                    : Text(
-                        'Coming Soon',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color(0xFF000000),
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16),
-                      ),
+                    : _button == 'Assignment 3'
+                        ? HeroAnimation()
+                        : Text(
+                            'Coming Soon',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Color(0xFF000000),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16),
+                          ),
             _buildBottomDrawer(context),
           ],
         ),
