@@ -19,10 +19,14 @@ class _HeroState extends State<HeroAnimation> {
   Widget _unAnimated(BuildContext context) {
     return Scaffold(
       body: GestureDetector(
-        child: Hero(
-          tag: 'imageHero',
-          child: Image.network(
-            'https://picsum.photos/250?image=9',
+        child: Center(
+          child: Hero(
+            tag: 'imageHero',
+            child: Image(
+              image: AssetImage('images/batman.jpeg'),
+              height: 400,
+              width: 300,
+            ),
           ),
         ),
         onTap: () {
@@ -41,8 +45,10 @@ class _HeroState extends State<HeroAnimation> {
         child: Center(
           child: Hero(
             tag: 'imageHero',
-            child: Image.network(
-              'https://picsum.photos/250?image=9',
+            child: Image(
+              image: AssetImage('images/batman.jpeg'),
+              height: 600,
+              width: 400,
             ),
           ),
         ),
